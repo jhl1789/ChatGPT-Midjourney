@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import { useEffect, useRef } from "react";
 
 import styles from "./home.module.scss";
@@ -120,9 +122,7 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]}>
         <div className={styles["sidebar-title"]}>ChatGPT-Midjourney</div>
-        <div className={styles["sidebar-sub-title"]}>
-          jwt's own AI server.
-        </div>
+        <div className={styles["sidebar-sub-title"]}>jwt's own AI server.</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
         </div>
@@ -168,17 +168,19 @@ export function SideBar(props: { className?: string }) {
               }}
             />
           </div>
-          <div className={styles["sidebar-action"]}
-          id="settingId1"
-          style={{ display: "none" }}
+          <div
+            className={styles["sidebar-action"]}
+            id="settingId1"
+            style={{ display: "none" }}
           >
             <Link to={Path.Settings}>
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
           </div>
-          <div className={styles["sidebar-action"]}
-          id="repoId"
-          style={{ display: "none" }}
+          <div
+            className={styles["sidebar-action"]}
+            id="repoId"
+            style={{ display: "none" }}
           >
             <a href={REPO_URL} target="_blank">
               <IconButton icon={<GithubIcon />} shadow />

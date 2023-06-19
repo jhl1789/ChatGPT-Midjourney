@@ -337,7 +337,7 @@ export function ChatActions(props: {
   }
 
   const onImageSelected = (e: any) => {
-    console.log(e)
+    console.log(e);
     const file = e.target.files[0];
     const filename = file.name;
     const reader = new FileReader();
@@ -374,6 +374,8 @@ export function ChatActions(props: {
         <div
           className={`${chatStyle["chat-input-action"]} clickable`}
           onClick={props.showPromptModal}
+          id="settingId"
+          style={{ display: "none" }}
         >
           <SettingsIcon />
         </div>

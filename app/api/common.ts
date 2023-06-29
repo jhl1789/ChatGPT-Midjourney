@@ -19,9 +19,9 @@ export async function requestOpenai(req: NextRequest) {
     baseUrl = `${PROTOCOL}://${baseUrl}`;
   }
 
-  console.log("[Proxy] ", openaiPath);
-  console.log("[Base Url]", baseUrl);
-
+  // console.log("[Proxy] ", openaiPath);
+  // console.log("[Base Url]", baseUrl);
+  console.log(); // 换行
   if (process.env.OPENAI_ORG_ID) {
     console.log("[Org ID]", process.env.OPENAI_ORG_ID);
   }
